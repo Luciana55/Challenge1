@@ -9,8 +9,8 @@ public class Giraffe extends Animal {
     public Giraffe() {
     }
 
-    public Giraffe(double height, int id, String species, String name, String numberLegs, String gender) {
-        super(id, species, name, numberLegs, gender);
+    public Giraffe(double height, String species, String name, String numberLegs, String gender) {
+        super(species, name, numberLegs, gender);
         this.height = height;
     }
 
@@ -45,5 +45,11 @@ public class Giraffe extends Animal {
 
         }
 
+    }
+
+    @Override
+    public void description() {
+        setDescription();
+        this.description = getDescription() + "\n" + currentHeight() + " " + heightCompare() + "}";
     }
 }

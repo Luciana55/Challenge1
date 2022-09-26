@@ -8,6 +8,7 @@ public class Zoo {
     private String name;
     private String city;
     private String operatingHours;
+    
     private List<Animal> animalList = new ArrayList<Animal>();
 
     /* constructors */
@@ -87,6 +88,7 @@ public class Zoo {
     public void animalDescription() {
         System.out.println("Descriptions of Animals currently in the zoo:");
         for (Animal animal : animalList) {
+            animal.description();
             System.out.println(animal.getName() + " the " + animal.getSpecies() + ": " + animal.getDescription());
         }
     }

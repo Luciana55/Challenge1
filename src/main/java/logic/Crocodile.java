@@ -10,12 +10,11 @@ public class Crocodile extends Animal {
     public Crocodile() {
     }
 
-    public Crocodile(int numTheeth, String favFood, int id, String species, String name, String numberLegs, String gender) {
-        super(id, species, name, numberLegs, gender);
+    public Crocodile(int numTheeth, String favFood, String species, String name, String numberLegs, String gender) {
+        super(species, name, numberLegs, gender);
         this.numTheeth = numTheeth;
         this.favFood = favFood;
     }
-
 
     /* getters & setters */
     public int getNumTheeth() {
@@ -36,10 +35,16 @@ public class Crocodile extends Animal {
 
     /* methods */
     public String favFood() {
-        return '{' + "Favourite food = " + favFood + '}';
+        return "Favourite food = " + favFood;
     }
 
     public String numberTheets() {
         return "This cocodrile has " + numTheeth + " theeths.";
+    }
+
+    @Override
+    public void description() {
+        setDescription();
+        this.description = getDescription() + ", " + numberTheets() + " " + favFood() + "}";
     }
 }

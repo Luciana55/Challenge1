@@ -1,6 +1,6 @@
 package logic;
 
-public class Animal {
+public abstract class Animal {
 
     /*  attributes */
     private int id;
@@ -8,21 +8,22 @@ public class Animal {
     private String name;
     private String numberLegs;
     private String gender;
-    private String description;
-    
-    
+    protected String description;
+    private static int idCounter = 0;
 
     /* constructors */
     public Animal() {
     }
 
-    public Animal(int id, String species, String name, String numberLegs, String gender) {
-        this.id = id;
+    public Animal(String species, String name, String numberLegs, String gender) {
+        idCounter++;
+        this.id = idCounter;
         this.species = species;
         this.name = name;
         this.numberLegs = numberLegs;
         this.gender = gender;
-        
+        this.description = description;
+
     }
 
     /* getters & setters */
@@ -67,6 +68,7 @@ public class Animal {
     }
 
     public String getDescription() {
+
         return description;
     }
 
@@ -74,12 +76,11 @@ public class Animal {
         this.description = toString();
     }
 
-
-
-    /* to string */
+    /*methods */
     @Override
     public String toString() {
-        return "{" + "Id = " + id + ", Species = " + species + ", Name = " + name + ", Number of legs = " + numberLegs + ", Gender = " + gender + '}';
+        return "{" + "Id = " + id + ", Species = " + species + ", Name = " + name + ", Number of legs = " + numberLegs + ", Gender = " + gender;
     }
 
+    public abstract void description();
 }

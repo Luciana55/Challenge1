@@ -9,12 +9,12 @@ public class GiantTortoise extends Animal {
     public GiantTortoise() {
     }
 
-    public GiantTortoise(int age, int id, String species, String name, String numberLegs, String gender) {
-        super(id, species, name, numberLegs, gender);
+    public GiantTortoise(int age, String species, String name, String numberLegs, String gender) {
+        super(species, name, numberLegs, gender);
         this.age = age;
     }
 
-    /* getter  setters */
+    /* getter & setters */
     public int getAge() {
         return age;
     }
@@ -40,5 +40,11 @@ public class GiantTortoise extends Animal {
 
     public String currentAge() {
         return "This tortoise is " + age + " years old.";
+    }
+
+    @Override
+    public void description() {
+        setDescription();
+        this.description = getDescription() + ", " + currentAge() + " " + ageStage() + "}";
     }
 }

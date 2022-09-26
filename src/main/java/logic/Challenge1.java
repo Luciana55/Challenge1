@@ -1,8 +1,5 @@
 package logic;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Challenge #1 Object Oriented Challenge
  *
@@ -15,7 +12,7 @@ public class Challenge1 {
         Zoo zoo = new Zoo();
 
         /* Zoo Characteristics */
- /* Zoo Information */
+         /* Zoo Information */
         zoo.setName("Rainforest");
         zoo.setCity("California");
         zoo.setOperatingHours("9am to 6pm");
@@ -26,15 +23,14 @@ public class Challenge1 {
         System.out.println("------------------------------");
 
         /* Admission Price depending on the current day of the week */
-        zoo.dayPrice("Monday");
+        zoo.dayPrice("Saturday");
         System.out.println("------------Create New Animals------------------");
 
         /* Create animals */
 
- /* Crocodile */
-        Crocodile croco1 = new Crocodile(32, "Fish", 1, "Cuban crocodile", "Thunder", "4", "Male");
-        /* Set description of the characteristics */
-        croco1.setDescription();
+        /* Crocodile */
+        Crocodile croco1 = new Crocodile(32, "Fish", "Cuban crocodile", "Thunder", "4", "Male");
+
         /* display methods */
         System.out.println(croco1.numberTheets());
         System.out.println(croco1.favFood());
@@ -42,9 +38,8 @@ public class Challenge1 {
         System.out.println("------------------------------");
 
         /* Tortoise */
-        GiantTortoise giant1 = new GiantTortoise(24, 2, "Aldabra tortoise", "Cherry", "4", "Female");
-        /* Set description of the characteristics */
-        giant1.setDescription();
+        GiantTortoise giant1 = new GiantTortoise(24, "Aldabra tortoise", "Cherry", "4", "Female");
+        ;
         /* display methods */
         System.out.println(giant1.currentAge());
         System.out.println(giant1.ageStage());
@@ -52,16 +47,14 @@ public class Challenge1 {
         System.out.println("------------------------------");
 
         /* Giraffe */
-        Giraffe gira1 = new Giraffe(4.7, 4, "Giraffa reticulata", "Lemon", "4", "Female");
-        /* Set description of the characteristics */
-        gira1.setDescription();
+        Giraffe gira1 = new Giraffe(4.7, "Giraffa reticulata", "Lemon", "4", "Female");
+
         /* display methods */
         System.out.println(gira1.currentHeight());
         System.out.println(gira1.heightCompare());
 
-        Giraffe gira2 = new Giraffe(5.5, 5, "Giraffa camelopardalis", "Blue", "4", "Male");
-        /* Set description of the characteristics */
-        gira2.setDescription();
+        Giraffe gira2 = new Giraffe(5.5, "Giraffa camelopardalis", "Blue", "4", "Male");
+
         /* display methods */
         System.out.println(gira2.currentHeight());
         System.out.println(gira2.heightCompare());
@@ -78,7 +71,7 @@ public class Challenge1 {
         System.out.println("------------------------------");
 
         /* Remove animal from the zoo */
-        zoo.remove(2);
+        zoo.remove(3);
         System.out.println("------------------------------");
 
         /* Print out how many Animals are currently living in the zoo */
@@ -87,6 +80,8 @@ public class Challenge1 {
 
         /* Print out descriptions of all the animals that currently live in the zoo*/
         zoo.animalDescription();
+        
+        
 
     }
 
